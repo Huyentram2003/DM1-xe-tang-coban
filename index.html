@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+    <img id="tank"
+         src="img/anh1.jpg"
+         style="position: relative; top: 0px; left: 0px;"
+         width="19"
+         height="19">
+</div>
+</br>
+</br>
+<button onclick="moveLeft()" >trai</button>
+<button onclick="moveRight()" >trai</button>
+<script>
+    // di chuyển động (hình ảnh) qua onClick
+    let image ;
+    image = document.getElementById('tank');
+    function init() {
+        image.style.position = 'relative'
+        image.style.top = '10px';
+        image.style.left = '0px' ;
+    }
+    init()
+    function moveLeft() {
+    image.style.left = parseInt(image.style.left) +10+'px'
+    }
+    function moveRight () {
+        image.style.right = parseInt(image.style.right) +10+'px'
+    }
+    function
+
+</script>
+
+
+
+
+<!--cách đặt css cứng -->
+<!--thêm class vào liên kết của <img>-->
+
+</body>
+</html>
