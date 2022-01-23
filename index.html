@@ -14,10 +14,11 @@
 </div>
 </br>
 </br>
-<button onclick="moveLeft()" >trai</button>
-<button onclick="moveRight()" >trai</button>
+<button onclick="moveLeft()" >&rarr;</button>
+<button onclick="moveRight()" >	&larr;</button>
+<button onclick="moveDown()" >&darr;</button>
+<button onclick="moveUp()">	&uarr;</button>
 <script>
-    // di chuyển động (hình ảnh) qua onClick
     let image ;
     image = document.getElementById('tank');
     function init() {
@@ -27,20 +28,40 @@
     }
     init()
     function moveLeft() {
-    image.style.left = parseInt(image.style.left) +10+'px'
+        image.style.left = parseInt(image.style.left) +10+'px';
     }
     function moveRight () {
-        image.style.right = parseInt(image.style.right) +10+'px'
+        image.style.left = parseInt(image.style.left) -10+'px';
     }
-    function
-
+    function moveDown() {
+        image.style.top = parseInt(image.style.top) +10+'px';
+    }
+    function moveUp() {
+        image.style.top = parseInt(image.style.top) -10+'px';
+    }
+    function moveSelection(evt){
+        switch (evt.keyCode) {
+            case 37 :
+                moveLeft();
+                break;
+            case 38 :
+                moveUp();
+                break;
+            case 39 :
+                moveRight();
+                break;
+            case 40 :
+                moveDown();
+                break;
+        }
+    }
+    function doReady(){
+        window.addEventListener('keydown',moveSelection)
+    }
+    document.body.onload = doReady;
 </script>
 
 
-
-
-<!--cách đặt css cứng -->
-<!--thêm class vào liên kết của <img>-->
 
 </body>
 </html>
